@@ -8,53 +8,65 @@ body {
     align-items: center;
     height: 100vh;
   }
-  
+
+  /*================Main Container=================*/
   .counter {
     background-color: #e5e5f7;
     opacity: 0.8;
-    background-image: repeating-linear-gradient(45deg, #f74545 25%, transparent 25%, transparent 75%, #f74545 75%, #f74545), repeating-linear-gradient(45deg, #f74545 25%, #e5e5f7 25%, #e5e5f7 75%, #f74545 75%, #f74545);
+    background-image: repeating-linear-gradient(45deg, #f74545 25%, transparent 25%, transparent 75%, #f74545 75%, #f74545), repeating-linear-gradient(45deg, #f74545 25%, #e5e5f7 25%, #e5e5f7 75%, #f74545 75%, #f74545);/* Diagonal lines */
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
     padding: 80px;
     border-radius: 10px;
     width: 80%;
-    position: relative; 
+    position: relative;
+    
+    /*------Method 2 to center items vertically without using top,bottom,left,right---------*/
+    /*
+      display: inline-flex;
+      justify-content: space-between; 
+      align-items: center;
+    */ 
+ 
   }
-  
+
+  /*================Pastry Container=================*/
   .pastry {
     color: #533117;
-    padding: 20px;
-    border-radius: 50%;
+    padding: 20px; 
+    border-radius: 50%; 
     font-size: 18px;
-    position: absolute; 
+    position: absolute;  /*If method 2 is used then we remove the property positioned absolute */
   }
   
   .pastry img {
     width: 50px;
     height: 50px;
   }
-  
+
+
+   /*==========Using percentages to align items==============*/
   .pastry1 { /* Cookie */
-    top: 0;
-    left: 0;
+    top: 20%;
+    left: 10%; 
     background-color: #f0bb7f; 
   }
   
   .pastry2 { /* Brownie */
-    top: 0;
-    right: 0;
+    top: 20%; 
+    left:32.5%; 
     background-color: #7f553f; 
   }
   
   .pastry3 { /* Cupcake */
-    bottom: 0;
-    left: 0;
+    bottom: 20%; 
+    right: 32.5%;
     background-color: #f0a8be; 
   }
   
   .pastry4 { /* Jelly Roll */
-    bottom: 0;
-    right: 0;
+    bottom: 20%; 
+    right: 10%;
     background-color: #7fa8f0; 
   }
-  
+ 
